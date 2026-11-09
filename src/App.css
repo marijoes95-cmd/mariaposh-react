@@ -1,0 +1,900 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+
+/* =========================
+   COLORES DE MARIAPOSH
+========================= */
+
+:root {
+  --marfil: #F6F3ED;
+  --negro: #211D1D;
+  --borgona: #9E4058;
+  --gris: #655A53;
+}
+
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--marfil);
+  color: var(--negro);
+  font-family: 'Inter', sans-serif;
+}
+
+.app {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 35px 60px 60px;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+header p {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+
+header h1 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 64px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* =========================
+   MENÚ DE NAVEGACIÓN
+========================= */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 20px 0;
+  margin-top: 30px;
+  border-top: 1px solid var(--negro);
+  border-bottom: 1px solid var(--negro);
+}
+
+
+nav a {
+  color: var(--negro);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a.active {
+  color: var(--borgona);
+}
+
+nav a:hover {
+  color: var(--borgona);
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+main {
+  padding-top: 30px;
+}
+
+/* =========================
+   PORTADA EDITORIAL
+========================= */
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: start;
+  min-height: 580px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid var(--negro);
+}
+
+/* =========================
+   FOTOGRAFÍA
+========================= */
+
+.hero-imagen {
+  width: 100%;
+  position: relative;
+}
+
+.hero-imagen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================
+   CONTENIDO SUPERPUESTO
+========================= */
+
+.hero-contenido {
+  position: relative;
+  z-index: 2;
+  margin-left: -220px;
+  padding-top: 25px;
+}
+
+/* =========================
+   TITULAR PRINCIPAL
+========================= */
+
+.hero-titulo {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(56px, 5vw, 90px);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  margin: 0 0 35px;
+}
+
+.hero-titulo span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* PALABRA DESTACADA */
+
+.hero-acento {
+  color: var(--borgona);
+  font-style: italic;
+}
+
+/* =========================
+   DESCRIPCIÓN
+========================= */
+
+.hero-contenido p {
+  max-width: 440px;
+  margin: 0 0 25px 45px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--gris);
+}
+
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+
+.hero-boton {
+  display: inline-block;
+  margin-left: 45px;
+  padding: 20px 30px;
+  background-color: var(--borgona);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease;
+}
+
+.hero-boton:hover {
+  background-color: #803249;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1024px) {
+
+  .app {
+    padding: 30px 40px 50px;
+  }
+
+  header h1 {
+    font-size: 52px;
+  }
+
+  .hero {
+    grid-template-columns: 52% 48%;
+    min-height: 480px;
+  }
+
+  .hero-contenido {
+    margin-left: -70px;
+    padding-top: 20px;
+  }
+
+  .hero-titulo {
+    font-size: clamp(46px, 6vw, 75px);
+  }
+
+  .hero-contenido p {
+    margin-left: 40px;
+    font-size: 16px;
+  }
+
+  .hero-boton {
+    margin-left: 40px;
+  }
+}
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 768px) {
+
+  .app {
+    padding: 24px;
+  }
+
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  header h1 {
+    order: -1;
+    width: 100%;
+    font-size: 42px;
+  }
+
+  header p {
+    font-size: 10px;
+  }
+
+  nav {
+    gap: 20px;
+    margin-top: 25px;
+    padding: 18px 0;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  main {
+    padding-top: 25px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .hero-imagen {
+    width: 92%;
+    position: relative;
+  }
+
+  .hero-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-contenido {
+    position: relative;
+    z-index: 2;
+    margin-left: 0;
+    margin-top: -35px;
+    padding-top: 0;
+  }
+
+  .hero-titulo {
+    font-size: clamp(40px, 9vw, 68px);
+    line-height: 1;
+    margin-bottom: 28px;
+  }
+
+  .hero-titulo span {
+    white-space: normal;
+  }
+
+  .hero-contenido p {
+    max-width: 100%;
+    margin: 0 0 25px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero-boton {
+    margin-left: 0;
+    padding: 17px 25px;
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   SECCIÓN LOS ELEGIDOS
+========================= */
+
+.productos-seccion {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--negro);
+}
+
+.productos-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.productos-etiqueta {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--borgona);
+}
+
+.productos-curated {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.productos-titulo {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin: 0 0 40px;
+}
+
+/* GRILLA DE PRODUCTOS */
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* TARJETA */
+
+.product-card {
+  min-width: 0;
+}
+
+.product-card-imagen {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #E9E2DA;
+}
+
+.product-card-imagen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card-info {
+  padding-top: 20px;
+}
+
+.product-card-categoria {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--borgona);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.product-card-info h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.product-card-precio {
+  font-size: 14px;
+  color: var(--gris);
+  margin: 0 0 18px;
+}
+
+.product-card-info a {
+  color: var(--negro);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.product-card-info a:hover {
+  color: var(--borgona);
+}
+
+/* ADAPTACIÓN RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .productos-seccion {
+    padding: 50px 0;
+  }
+
+  .productos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .productos-titulo {
+    font-size: 42px;
+  }
+
+  .productos-curated {
+    font-size: 10px;
+  }
+
+  .product-card-info {
+    padding-top: 12px;
+  }
+
+  .product-card-info h3 {
+    font-size: 14px;
+  }
+}
+
+/* CATÁLOGO MARIAPOSH */
+
+.catalogo {
+  padding-top: 80px;
+}
+
+.catalogo-titulo {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 25px 0;
+}
+
+.catalogo-descripcion {
+  max-width: 650px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--gris);
+  margin-bottom: 60px;
+}
+
+.catalogo-controles {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.catalogo-controles input {
+  flex: 1;
+  min-width: 0;
+  padding: 20px 25px;
+  border: 1px solid #CFC6BE;
+  border-radius: 0;
+  background: #FFFFFF;
+  color: var(--negro);
+  outline-color: var(--borgona);
+}
+
+.catalogo-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.catalogo-filtros button {
+  padding: 20px 18px;
+  border: 1px solid var(--negro);
+  border-radius: 0;
+  background: transparent;
+  color: var(--negro);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.catalogo-filtros button.activo {
+  background: var(--borgona);
+  border-color: var(--borgona);
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .catalogo-controles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .catalogo-filtros button {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalogo {
+    padding-top: 40px;
+  }
+
+  .catalogo-descripcion {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  .catalogo-controles {
+    margin-bottom: 45px;
+  }
+}
+
+/* DETALLE DE PRODUCTO */
+
+.detalle {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.detalle-volver {
+  display: inline-block;
+  color: var(--borgona);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin-bottom: 70px;
+}
+
+.detalle-volver:hover {
+  text-decoration: underline;
+}
+
+.detalle-contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.detalle-imagen {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #E9E2DA;
+  overflow: hidden;
+}
+
+.detalle-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.detalle-info {
+  padding-top: 60px;
+}
+
+.detalle-info h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(46px, 5vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 35px 0 45px;
+}
+
+.detalle-info h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0 0 35px;
+}
+
+.detalle-linea {
+  height: 1px;
+  background-color: var(--negro);
+  margin-bottom: 35px;
+}
+
+.detalle-info p {
+  color: var(--gris);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.detalle-boton {
+  display: inline-block;
+  padding: 20px 30px;
+  background-color: var(--borgona);
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.detalle-boton:hover {
+  background-color: #803249;
+}
+
+@media (max-width: 768px) {
+  .detalle {
+    padding-top: 35px;
+  }
+
+  .detalle-volver {
+    margin-bottom: 35px;
+  }
+
+  .detalle-contenido {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .detalle-info {
+    padding-top: 0;
+  }
+
+  .detalle-info h2 {
+    margin: 20px 0 25px;
+  }
+
+  .detalle-info h3 {
+    font-size: 24px;
+  }
+}
+
+/* TARJETAS DE CATEGORÍAS */
+
+.categorias-seccion {
+  margin: 20px 0 65px;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.categoria-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: #e9e2da;
+  cursor: pointer;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  text-align: left;
+}
+
+.categoria-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.categoria-card:hover img {
+  transform: scale(1.04);
+}
+
+.categoria-card span {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  color: #fff;
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(26px, 3vw, 45px);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 650px) {
+  .categorias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .categoria-card {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* FOOTER MARIAPOSH */
+
+.footer {
+  margin-top: 100px;
+  padding-top: 45px;
+  border-top: 1px solid var(--negro);
+}
+
+.footer-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-bottom: 65px;
+}
+
+.footer-marca h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 54px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.footer-marca p {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin-top: 8px;
+}
+
+.footer-enlaces {
+  display: flex;
+  gap: 35px;
+  padding-top: 22px;
+}
+
+.footer-enlaces a {
+  color: var(--negro);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.footer-enlaces a:hover {
+  color: var(--borgona);
+}
+
+.footer-inferior {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #CFC6BE;
+  padding: 25px 0;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--gris);
+}
+
+@media (max-width: 650px) {
+  .footer {
+    margin-top: 60px;
+  }
+
+  .footer-superior {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  .footer-marca h2 {
+    font-size: 42px;
+  }
+
+  .footer-enlaces {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 0;
+  }
+
+  .footer-inferior {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* CATEGORÍAS EN HOME */
+
+.home-categorias {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  border-bottom: 1px solid var(--negro);
+}
+
+.home-categorias .productos-titulo {
+  margin-bottom: 45px;
+}
+
+@media (max-width: 650px) {
+  .home-categorias {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+/* MANIFIESTO EDITORIAL */
+
+.home-manifiesto {
+  padding: 90px 0 70px;
+  border-top: 1px solid var(--negro);
+}
+
+.manifiesto-texto {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.manifiesto-texto h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(42px, 5.5vw, 78px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  margin: 30px 0;
+}
+
+.manifiesto-texto h2 em {
+  color: var(--borgona);
+  font-weight: 400;
+}
+
+.manifiesto-texto p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--gris);
+}
+
+.manifiesto-imagen {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.manifiesto-imagen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+@media (max-width: 650px) {
+  .home-manifiesto {
+    padding: 55px 0 35px;
+  }
+
+  .manifiesto-texto h2 {
+    font-size: 40px;
+  }
+
+  .manifiesto-imagen {
+    height: 250px;
+  }
+}
+
